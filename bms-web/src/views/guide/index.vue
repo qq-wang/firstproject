@@ -1,10 +1,9 @@
 <template>
-  <el-card>
-    <h1>dashboard</h1>
-  </el-card>
+  <div><h1>guide</h1></div>
 </template>
 <script>
 export default {
+  name: 'Guide',
   data () {
     return {}
   }

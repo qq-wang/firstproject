@@ -1,10 +1,11 @@
 <template>
-  <el-card>
-    <h1>dashboard</h1>
-  </el-card>
+  <div>
+    <h1>directivePermission</h1>
+  </div>
 </template>
 <script>
 export default {
+  name: 'DirectivePermission',
   data () {
     return {}
   }

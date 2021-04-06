@@ -1,10 +1,11 @@
 <template>
-  <el-card>
-    <h1>dashboard</h1>
-  </el-card>
+  <div>
+    <h1>401</h1>
+  </div>
 </template>
 <script>
 export default {
+  name: 'Page401',
   data () {
     return {}
   }
