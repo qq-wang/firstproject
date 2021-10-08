@@ -52,7 +52,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: {title: 'Dashboard', icon: 'dashboard', affix: true}
+        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
       }
     ]
   },
@@ -61,10 +61,10 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'documentation',
+        path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: {title: 'Documentation', icon: 'documentation', affix: true}
+        meta: { title: 'Documentation', icon: 'documentation', affix: true }
 
       }
     ]
@@ -78,7 +78,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/guide/index'),
         name: 'Guide',
-        meta: {title: 'Guide', icon: 'guide', noCache: true}
+        meta: { title: 'Guide', icon: 'guide', noCache: true }
       }
     ]
   },
@@ -92,7 +92,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/profile/index'),
         name: 'Profile',
-        meta: {title: 'Profile', icon: 'user', naCache: true}
+        meta: { title: 'Profile', icon: 'user', naCache: true }
       }
     ]
   }
@@ -148,7 +148,7 @@ export const asyncRoutes = [
     path: '/icon',
     component: () => import('@/views/icons/index'),
     name: 'Icons',
-    meta: {title: 'Icons', icon: 'icon', noCache: true}
+    meta: { title: 'Icons', icon: 'icon', noCache: true }
   },
 
   /**
@@ -158,19 +158,19 @@ export const asyncRoutes = [
   */
 
   // 404页面必须放在最后
-  {path: '*', redirect: '/404', hidden: true}
+  { path: '*', redirect: '/404', hidden: true }
 ]
 
 const createRouter = () =>
   new Router({
-    mode: history,
-    scrollBehavior: () => ({y: 0}), // 路由切换置顶
+    // mode: history,
+    scrollBehavior: () => ({ y: 0 }), // 路由切换置顶
     routes: constantRoutes
   })
 
 const router = createRouter()
 
-export function resetRouter () {
+export function resetRouter() {
   const newRouter = createRouter()
   router.matcher = newRouter.matcher
 }

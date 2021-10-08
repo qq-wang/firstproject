@@ -13,24 +13,21 @@
 
       <el-form-item prop="usename">
         <span class="svg-container">
-          <svg-icon></svg-icon>
+          <svg-icon/>
         </span>
-        <el-input
-          v-model="loginForm.username"
-          placeholder="账号"
-        ></el-input>
+        <el-input v-model="loginForm.username" placeholder="账号"/>
       </el-form-item>
 
       <el-tooltip v-model="capsTooltip" manual content="大写字母已开启">
         <el-form-item prop="password">
           <span class="svg-container">
-            <svg-icon></svg-icon>
+            <svg-icon/>
           </span>
           <el-input
             v-model="loginForm.password"
             placeholder="密码"
             show-password
-          ></el-input>
+          />
         </el-form-item>
       </el-tooltip>
 
@@ -46,16 +43,21 @@
           <span>Password : any</span>
         </div>
 
-        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
+        <el-button
+          class="thirdparty-button"
+          type="primary"
+          @click="showDialog = true"
+        >
           Or connect with
         </el-button>
       </div>
 
-      <el-dialog title="Or connect with" :visible.sync="showDialog">
-        Can not be simulated on local, so please combine you own business simulation! ! !
-        <br>
-        <br>
-        <br>
+      <el-dialog :visible.sync="showDialog" title="Or connect with">
+        Can not be simulated on local, so please combine you own business
+        simulation! ! !
+        <br >
+        <br >
+        <br >
         <social-sign />
       </el-dialog>
     </el-form>
@@ -66,7 +68,7 @@ import SocialSign from './components/social-sign'
 export default {
   name: 'Login',
   components: { SocialSign },
-  data () {
+  data() {
     return {
       capsTooltip: false,
       showDialog: false,

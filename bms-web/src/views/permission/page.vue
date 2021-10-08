@@ -6,7 +6,7 @@
 <script>
 export default {
   name: 'PagePermission',
-  data () {
+  data() {
     return {}
   }
 }

@@ -4,7 +4,7 @@
 <script>
 export default {
   name: 'Guide',
-  data () {
+  data() {
     return {}
   }
 }
